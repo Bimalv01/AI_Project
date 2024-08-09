@@ -184,15 +184,15 @@ if teacher_id and teacher_df is not None:
         st.pyplot(wordcloud_fig)
 
 # Text input for sentiment prediction
-st.subheader('Predict Feedback Sentiment')
-user_feedback = st.text_input('Enter feedback text:')
+# st.subheader('Predict Feedback Sentiment')
+# user_feedback = st.text_input('Enter feedback text:')
 
-if user_feedback:
-    cleaned_feedback = clean_text(user_feedback)
-    feedback_tfidf = vectorizer.transform([cleaned_feedback])
-    prediction = decision_tree_model.predict(feedback_tfidf)[0]
-    sentiment = 'Positive' if prediction == 1 else 'Negative'
-    st.write(f'Sentiment: {sentiment}')
+# if user_feedback:
+#     cleaned_feedback = clean_text(user_feedback)
+#     feedback_tfidf = vectorizer.transform([cleaned_feedback])
+#     prediction = decision_tree_model.predict(feedback_tfidf)[0]
+#     sentiment = 'Positive' if prediction == 1 else 'Negative'
+#     st.write(f'Sentiment: {sentiment}')
 
 # Display sample negative feedbacks
 st.subheader('Feedbacks')
