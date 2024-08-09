@@ -195,7 +195,7 @@ if user_feedback:
     st.write(f'Sentiment: {sentiment}')
 
 # Display sample negative feedbacks
-st.subheader('Sample Negative Feedbacks')
+st.subheader('Feedbacks')
 sample_negative_sentences = get_sample_negative_sentences(df, vectorizer, decision_tree_model)
 for i, feedback in enumerate(sample_negative_sentences, 1):
     st.write(f"{i}. {feedback}")
